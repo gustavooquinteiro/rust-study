@@ -1,44 +1,40 @@
 use std::io;
 
-fn partition(vec: &mut Vec<u32>, low: u32, high: u32) -> u32 {
+fn partition<T,F>(vec: &mut [T], f: &F) -> usize 
+    where F: Fn(&T,&T) -> bool 
+{
     
-    let mut low_index = low as usize;
-    let high_index = (high-1) as usize;
-    
-    let pivot_index = high_index as usize;
-    let pivot = vec[pivot_index];
-    
-    let mut i = low_index;
-    
-    while low_index < high_index {
-        if vec[low_index] < pivot {
-            vec.swap(i, low_index);
-            i += 1;
-        }
-        low_index += 1;
-    }
-    if vec[high_index] < vec[i] {
-        vec.swap(i, high_index);
-    }
+    let len = vec.len();
+    let last_index = len - 1;
         
-    i as u32
-}
-
-
-fn quicksort(vec: &mut Vec<u32>, low: u32, high: u32) -> &mut Vec<u32> {
-    if low < high {
-        let p = partition(vec, low, high);
-        quicksort(vec, low, p - 1);
-        quicksort(vec, p+1, high);
+    let mut store_index = 0;
+    
+    for i in 0..last_index {
+        if f(&vec[i], &vec[last_index]) {
+            vec.swap(i, store_index);
+            store_index += 1;
+        }
     }
-    vec
+    vec.swap(store_index, last_index);
+    store_index
 }
 
+
+fn quicksort<T,F>(vec: &mut [T], f: &F) 
+    where F: Fn(&T, &T) -> bool
+{
+    let len = vec.len();
+    if len >= 2 {
+        let p = partition(vec, f);
+        quicksort(&mut vec[0..p], f);
+        quicksort(&mut vec[p+1..len], f);
+    }
+}
 
 fn main() {
     let mut n = String::new();
     io::stdin().read_line(&mut n).expect("Expect string");
-    let n: u32 = n.trim().parse().expect("Expect number");
+    let n: usize = n.trim().parse().expect("Expect number");
     
     let mut vec: Vec<u32> = Vec::new();
     for _ in 0..n {
@@ -49,7 +45,7 @@ fn main() {
         vec.push(number);
     }
     
-    let vec = quicksort(&mut vec, 0, n-1);
+    quicksort(&mut vec, &|x, y| x < y);
     println!("{:?}", vec);
     
 }
