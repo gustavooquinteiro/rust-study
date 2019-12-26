@@ -9,10 +9,12 @@ Uma linguagem de programação para sistemas open-source, projetada para ajudar 
 Além disso, Rust oferece custo zero nas suas abstrações, mudanças de semânticas, garantia de segurança de memória, threads sem condições de corrida, generics baseados em traços, pattern matching (casamento de padrões), inferência de tipos e binding eficiente para C, com o menor tamanho em tempo de execução.  
  
 ## Sumario
-Implementações de alguns algoritmos para estudo da sintaxe e funcionamento do Rust:
+Implementações de alguns algoritmos para estudo da sintaxe e funcionamento do Rust, segundo a [documentação oficial](https://doc.rust-lang.org/book/):
 
 1. [Hello, World!](hello-rust/src/main.rs): O primeiro código possível 
 2. [Guessing Game](guessing_game/src/main.rs): Geração de números aleatórios e utilização de condicionais e estruturas de repetição
 3. [Fibonacci (usando recursão)](fibonacci/src/main.rs): Utilização de funções recursivas
 4. [Fibonacci (usando abordagem gulosa)](greedy_fibonacci/src/main.rs): Utilização de vetores 
-5. [Quicksort](sorting_vector/src/main.rs): Utilização de [crates](https://doc.rust-lang.org/1.30.0/book/first-edition/crates-and-modules.html) 
+5. [Quicksort](sorting_vector/src/sorting/quicksort.rs): Utilização de [crates](https://doc.rust-lang.org/1.30.0/book/first-edition/crates-and-modules.html) 
+6. [Mergesort](sorting_vector/src/sorting/mergesort.rs): Implentação do algoritmo de mesclagem com crates
+7. [Struct e sintaxe de método](syntax_method/src/main.rs): Implementação de structs e sintaxe de métodos
