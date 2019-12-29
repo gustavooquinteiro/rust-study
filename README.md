@@ -18,4 +18,4 @@ Implementações de alguns algoritmos para estudo da sintaxe e funcionamento do 
 5. [Quicksort](sorting_vector/src/sorting/quicksort.rs): Utilização de [crates](https://doc.rust-lang.org/1.30.0/book/first-edition/crates-and-modules.html) 
 6. [Mergesort](sorting_vector/src/sorting/mergesort.rs): Implentação do algoritmo de mesclagem com crates
 7. [Struct e sintaxe de método](syntax_method/src/main.rs): Implementação de structs e sintaxe de métodos
-8. [Enum e pattern matching](defining_enum/src/main.rs): Implementação de enums do tipo Option<T> e casamento de padrões com o ```match```
+8. [Enum e pattern matching](defining_enum/src/main.rs): Implementação de enums do tipo Option<T> e casamento de padrões com o ```match``` e ```if let```
