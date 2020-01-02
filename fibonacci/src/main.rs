@@ -1,10 +1,10 @@
 use std::io;
 
 fn fibonacci(x: u32) -> u32 {
-    if (x == 1)  | (x == 2 ){
+    if (x == 1) | (x == 2) {
         1
     } else {
-        fibonacci(x-1) + fibonacci(x-2)
+        fibonacci(x - 1) + fibonacci(x - 2)
     }
 }
 
@@ -17,11 +17,11 @@ fn main() {
             Ok(num) => num,
             Err(_) => continue,
         };
-        
+
         if number == 0 {
             break;
         }
-    
-        println!("{}º numero Fibonacci = {}", number, fibonacci(number));    
+
+        println!("{}º numero Fibonacci = {}", number, fibonacci(number));
     }
 }

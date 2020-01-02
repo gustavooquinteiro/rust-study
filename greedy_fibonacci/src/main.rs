@@ -4,10 +4,10 @@ fn greedy_fibonacci(x: u32) -> u32 {
     let mut vec = Vec::new();
     vec.push(1);
     vec.push(1);
-    for i in 2..x as usize{
-        vec.push(vec[i-1] + vec[i-2]);
+    for i in 2..x as usize {
+        vec.push(vec[i - 1] + vec[i - 2]);
     }
-    vec[(x-1) as usize]
+    vec[(x - 1) as usize]
 }
 
 fn main() {
@@ -19,11 +19,15 @@ fn main() {
             Ok(num) => num,
             Err(_) => continue,
         };
-        
+
         if number == 0 {
             break;
         }
-    
-        println!("{}º numero Fibonacci = {}", number, greedy_fibonacci(number));    
+
+        println!(
+            "{}º numero Fibonacci = {}",
+            number,
+            greedy_fibonacci(number)
+        );
     }
 }
