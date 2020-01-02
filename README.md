@@ -2,7 +2,7 @@
 Repositório para estudo da linguagem Rust
 
 ## Rust
-Rust é uma linguagem de programação multiparadigma compilada desenvolvida pela [Mozilla Research](https://	www.mozilla.org). É projetada para ser "segura, concorrente e prática", suportando os estilos puramente funcional, procedural, e orientado a objetos. Possui suporte nativo ao WebAssembly.
+Rust é uma linguagem de programação multiparadigma compilada desenvolvida pela [Mozilla Research](https://www.mozilla.org). É projetada para ser "segura, concorrente e prática", suportando os estilos puramente funcional, procedural, e orientado a objetos. Possui suporte nativo ao WebAssembly.
 
 Uma linguagem de programação para sistemas open-source, projetada para ajudar desenvolvedores a criarem aplicações rápidas e seguras, que queiram aproveitar ao máximo as poderosas funcionalidades dos processadores modernos multi-cores. Ela previne falhas de segmentação e garante a segurança nas threads, tudo através de uma sintaxe fácil de aprender.
 
