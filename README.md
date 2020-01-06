@@ -19,3 +19,4 @@ Implementações de alguns algoritmos para estudo da sintaxe e funcionamento do 
 6. [Mergesort](sorting_vector/src/sorting/mergesort.rs): Implentação do algoritmo de mesclagem com crates
 7. [Struct e sintaxe de método](syntax_method/src/main.rs): Implementação de structs e sintaxe de métodos
 8. [Enum e pattern matching](defining_enum/src/main.rs): Implementação de enums do tipo Option<T> e casamento de padrões com o ```match``` e ```if let```
+9. [HashMap](hashmap/src/): Implementação de HashMap 
